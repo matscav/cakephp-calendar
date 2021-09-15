@@ -303,7 +303,7 @@ class CalendarHelper extends Helper {
 
 		$viewVars = $this->_View->get('_calendar');
 		if (!empty($viewVars['url'])) {
-		  $url = array_merge($url, $viewVars['url']);
+		  $url = array_merge($viewVars['url'], $url);
     }
 
 		return $this->Html->link(__('previous'), $url);
@@ -357,7 +357,7 @@ class CalendarHelper extends Helper {
 
 		$viewVars = $this->_View->get('_calendar');
 		if (!empty($viewVars['url'])) {
-			$url = array_merge($url, $viewVars['url']);
+			$url = array_merge($viewVars['url'], $url);
 		}
 
 		return $this->Html->link(__('next'), $url);
